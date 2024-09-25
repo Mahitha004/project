@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Update User</title>
+</head>
+<body>
+<h2>Update User</h2>
+<form action="/api/v1/update_user" method="post" th:object="${user}">
+    <input type="hidden" th:field="*{userId}"/>
+    <label for="fullName">Full Name:</label>
+    <input type="text" id="fullName" th:field="*{fullName}" required>
+    <br>
+    <label for="mobNum">Mobile Number:</label>
+    <input type="text" id="mobNum" th:field="*{mobNum}" required>
+    <br>
+    <label for="panNum">PAN Number:</label>
+    <input type="text" id="panNum" th:field="*{panNum}" required>
+    <br>
+    <button type="submit">Update User</button>
+</form>
+</body>
+</html>
